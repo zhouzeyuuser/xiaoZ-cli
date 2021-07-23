@@ -23,7 +23,7 @@ const program: Command = commander.program as Command;
 
 async function start() {
   program
-    .option('-D, --dep [dep...]', '需要集成的工具，支持 fp -D jest eslint ts editorConfig commit release travis')
+    .option('-D, --dep [dep...]', '需要集成的工具，支持 xiaoz cli -D jest eslint ts editorConfig commit vscode release travis')
     .option('-a, --all', '是否全部集成')
     .option('-l, --list', '查看支持的工具')
     .parse(process.argv);
