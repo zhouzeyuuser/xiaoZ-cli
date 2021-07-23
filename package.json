@@ -1,6 +1,6 @@
 {
   "name": "xiaoz-cli",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "基础项目脚手架工具",
   "main": "index.js",
   "bin": {
@@ -13,7 +13,7 @@
     "cz": "cz",
     "release": "standard-version",
     "release:rc": "standard-version --prerelease rc",
-    "pup": "npm run release && git push --follow-tags origin main",
+    "pup": "npm run release && git push --follow-tags origin master",
     "pub": "npm run pup && npm publish",
     "prepare": "npx husky install"
   },
