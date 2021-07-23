@@ -1,10 +1,10 @@
 {
   "name": "xiaoz-cli",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "基础项目脚手架工具",
   "main": "index.js",
   "bin": {
-    "xiaoZ": "bin/index.js"
+    "xiaoz": "bin/index.js"
   },
   "scripts": {
     "test": "jest",
