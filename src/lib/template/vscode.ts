@@ -7,7 +7,7 @@
  */
 export const vscodeTmpl = `{"editor.formatOnSave": true, // 保存自动格式化
 "eslint.format.enable": true, // 启用eslint格式化
-"files.eol": "\n",
+"files.eol": "\\n",
 "editor.tabSize": 2,
 "eslint.workingDirectories": ["./common"],
 "files.associations": {},

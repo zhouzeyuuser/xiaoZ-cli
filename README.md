@@ -14,7 +14,7 @@ npm i -g xiaoz-cli
 xiaoZ cli // 如不提供参数，默认会进行多选
 
 // 或者
-xiaoZ cli -D jest eslint ts editorConfig commit release travis
+xiaoZ cli -D jest eslint ts editorConfig commit release travis vscode
 // -D 参数支持数组，如提供了-D 参数，则不会进行选择
 
 ```
