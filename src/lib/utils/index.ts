@@ -82,6 +82,7 @@ export const installDeps = () => {
   setTimeout(() => {
     dependencies?.length && exec(`${pack} ${dependencies.join(` `)}`)
     devDependencies?.length && exec(`${pack} ${devDependencies.join(` `)} -D`)
+
   }, 100)
 }
 //合并

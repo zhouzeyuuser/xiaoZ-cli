@@ -9,9 +9,11 @@ import { showList } from '../lib/scripts/list';
 import { addRelease } from '../lib/scripts/release';
 import { addTravis } from '../lib/scripts/travis';
 import { addVscode } from '../lib/scripts/vscode';
+import { addClock } from '../lib/scripts/clock';
 
 import { selectListOption, ChoiceEnum } from '../lib/selects'
-import { installDeps, logFn } from '../lib/utils';
+import { installDeps, logFn, exec } from '../lib/utils';
+const prompts = require('prompts');
 
 interface Command extends commander.Command {
   dep: ChoiceEnum[];
@@ -53,6 +55,7 @@ async function start() {
   if (hasEslint || all) {
     logFn(() => addEslint(hasEditorConfig), `eslint`)
   }
+
   const hasVscode = dep.includes(ChoiceEnum.vscode)
   if (hasVscode || all) {
     logFn(() => addVscode(), `vscode`)
@@ -78,10 +81,31 @@ async function start() {
     logFn(() => addTravis(), `jest`)
   }
 
+  const hasClock = dep.includes(ChoiceEnum.clock)
+  if (hasClock || all) {
+    logFn(() => addClock(), `clock`)
+  }
+
   if (list) {
     showList()
   }
-  installDeps()
+
+  await installDeps()
+
+  if (hasEslint || all) {
+    setTimeout(() => {
+      (async () => {
+        const response = await prompts({
+          type: 'text',
+          name: 'meaning',
+          message: '是否立即执行eslint(y/n)'
+        });
+        if (response.meaning === 'y' || response.meaning === 'Y') {
+          exec('npm run eslint');
+        }
+      })();
+    }, 1000);
+  }
 }
 
 start()

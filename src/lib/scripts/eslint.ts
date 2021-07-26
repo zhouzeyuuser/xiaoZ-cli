@@ -1,5 +1,5 @@
 
-import { extendConfig, getPath, isExist, isExistTs, loadYml, pushDeps, pushSafe, writeFile, writeFileSafe } from "../utils"
+import { extendConfig, getPath, isExist, isExistTs, loadYml, pushDeps, pushSafe, writeFile, writeFileSafe, writePackageJson } from "../utils"
 import { eslintConfigTmpl, eslintRules } from "../template/eslint"
 import { editorConfigTmpl } from "../template/editorConfig"
 
@@ -40,6 +40,14 @@ export const addEslint = (hasEditorConfig: boolean) => {
   } else {
     writeFile(filename, (/\.json$/g.test(filename) ? '' : `module.exports = `) + JSON.stringify(config, null, '  '))
   }
+  writePackageJson({
+    "scripts": {
+      "eslint": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
+      "stylelint": "stylelint **/*.{css,less,scss} --fix",
+      "lint": "yarn prettier && yarn stylelint && yarn eslint",
+    },
+  })
+
 }
 
 function replaceEslint(config, hasEditorConfig: boolean) {
@@ -85,7 +93,7 @@ export const addTs = () => {
       "outDir": "./",
       "target": "ES6",
       "module": "CommonJS",
-      "allowJs": false,
+      "allowJs": true,
       "esModuleInterop": true,
       "isolatedModules": false,
       "experimentalDecorators": true,

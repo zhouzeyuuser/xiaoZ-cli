@@ -9,6 +9,7 @@ export enum ChoiceEnum {
   release = `release`,
   jest = `jest`,
   travis = `travis`,
+  clock = 'clock',
 }
 
 export const choiceList = [
@@ -52,6 +53,10 @@ export const choiceList = [
     value: ChoiceEnum.travis,
     desc: `自动化CI/CD`,
     links: [`https://docs.travis-ci.com/user/tutorial/`]
+  },
+  {
+    value: ChoiceEnum.clock,
+    desc: `是否锁定package.json版本号`
   },
 ].map(v => ({
   ...v,
