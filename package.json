@@ -1,6 +1,6 @@
 {
   "name": "xiaoz-cli",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "基础项目脚手架工具",
   "main": "index.js",
   "bin": {
