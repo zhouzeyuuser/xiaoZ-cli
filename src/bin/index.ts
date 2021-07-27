@@ -81,31 +81,32 @@ async function start() {
     logFn(() => addTravis(), `jest`)
   }
 
-  const hasClock = dep.includes(ChoiceEnum.clock)
-  if (hasClock || all) {
-    logFn(() => addClock(), `clock`)
-  }
-
   if (list) {
     showList()
   }
-
-  await installDeps()
-
-  if (hasEslint || all) {
-    setTimeout(() => {
-      (async () => {
-        const response = await prompts({
-          type: 'text',
-          name: 'meaning',
-          message: '是否立即执行eslint(y/n)'
-        });
-        if (response.meaning === 'y' || response.meaning === 'Y') {
-          exec('npm run eslint');
-        }
-      })();
-    }, 1000);
+  const cellBack = () => {
+    const hasClock = dep.includes(ChoiceEnum.clock)
+    if (hasClock || all) {
+      logFn(() => addClock(), `clock`)
+    }
+    if (hasEslint || all) {
+      setTimeout(() => {
+        (async () => {
+          const response = await prompts({
+            type: 'text',
+            name: 'meaning',
+            message: '是否立即执行eslint(y/n)'
+          });
+          if (response.meaning === 'y' || response.meaning === 'Y') {
+            exec('npm run eslint')
+          }
+        })()
+      }, 10)
+    }
   }
+
+  await installDeps(cellBack)
+
 }
 
 start()

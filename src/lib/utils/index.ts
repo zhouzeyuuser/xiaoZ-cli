@@ -78,10 +78,12 @@ export const exec = (str) => {
   })
 }
 //初始化插件
-export const installDeps = () => {
+export const installDeps = (cellBack) => {
   setTimeout(() => {
-    dependencies?.length && exec(`${pack} ${dependencies.join(` `)}`)
-    devDependencies?.length && exec(`${pack} ${devDependencies.join(` `)} -D`)
+    Promise.all([dependencies?.length && exec(`${pack} ${dependencies.join(` `)}`),
+    devDependencies?.length && exec(`${pack} ${devDependencies.join(` `)} -D`)]).then(() => {
+      cellBack();
+    })
 
   }, 100)
 }
