@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/zhouzeyuuser/xiaoZ-cli/compare/v1.2.11...v1.3.0) (2021-07-27)
+
+
+### Features
+
+* 新增部分规则 ([94ba508](https://github.com/zhouzeyuuser/xiaoZ-cli/commit/94ba508a35845707975a5deaf957cfa8b05de696))
+
 ### [1.2.11](https://github.com/zhouzeyuuser/xiaoZ-cli/compare/v1.2.10...v1.2.11) (2021-07-26)
 
 ### [1.2.10](https://github.com/zhouzeyuuser/xiaoZ-cli/compare/v1.2.9...v1.2.10) (2021-07-26)
