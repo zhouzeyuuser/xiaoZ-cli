@@ -79,3 +79,15 @@ lint-staged文档地址：[https://github.com/okonet/lint-staged#example-ignore-
 生成 ```.travis.yml``` 文件，相关配置如不满足需要，可自行修改。
 
 文档地址：[https://docs.travis-ci.com/user/tutorial/](https://docs.travis-ci.com/user/tutorial/)
+
+### 8. sentry监控配置（react/umi）
+
+生成```.sentryclirc``` 配置文件，在打包配置中增加sourceMap上传，在入口文件增加配置Sentry.init
+
+文档地址：[https://docs.sentry.io/](https://docs.sentry.io/)
+
+### 9. jenkinsFile文件配置生成
+
+生成```Jenkinsfile.groovy``` 配置文件，集成拉取代码，打包，发包
+
+文档地址：[https://www.jenkins.io/](https://www.jenkins.io/)

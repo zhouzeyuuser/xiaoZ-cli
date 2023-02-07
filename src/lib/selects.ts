@@ -10,6 +10,8 @@ export enum ChoiceEnum {
   jest = `jest`,
   travis = `travis`,
   clock = 'clock',
+  sentry='sentry',
+  jenkins='jenkinsfile'
 }
 
 export const choiceList = [
@@ -56,7 +58,18 @@ export const choiceList = [
   },
   {
     value: ChoiceEnum.clock,
-    desc: `是否锁定package.json版本号`
+    desc: `是否锁定package.json版本号`,
+    links: [`https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json`]
+  },
+  {
+    value: ChoiceEnum.sentry,
+    desc: `自动化配置sentry模版`,
+    links: [`https://docs.sentry.io/`]
+  },
+  {
+    value: ChoiceEnum.jenkins,
+    desc: `自动化构建Jenkinsfile.groovy模版`, 
+    links: [`https://www.jenkins.io/`]
   },
 ].map(v => ({
   ...v,

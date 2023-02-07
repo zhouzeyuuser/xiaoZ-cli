@@ -36,6 +36,6 @@ functions/mock
 # screenshot
 screenshot
 .firebase
-bin/
-lib/
+/bin/
+/lib/
 *tgz
