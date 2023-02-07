@@ -1,8 +1,5 @@
 import {
-  getPackageJson,
   writeFileSafe,
-  writePackageJson,
-  getPath,
   exec,
   isExist,
 } from "../utils";
