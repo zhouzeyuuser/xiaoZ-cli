@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0-rc.0](https://github.com/zhouzeyuuser/xiaoZ-cli/compare/v1.3.1...v1.4.0-rc.0) (2023-02-08)
+
+
+### Features
+
+* 新增cellback ([da323ed](https://github.com/zhouzeyuuser/xiaoZ-cli/commit/da323edd0c737889a469e256855286dd2099e55c))
+
+
+### Bug Fixes
+
+* 清理不需要的引用 ([167cadc](https://github.com/zhouzeyuuser/xiaoZ-cli/commit/167cadc106aea42db2962dc973c8a3097a0eda83))
+
 ### [1.3.1](https://github.com/zhouzeyuuser/xiaoZ-cli/compare/v1.3.0...v1.3.1) (2021-07-27)
 
 ## [1.3.0](https://github.com/zhouzeyuuser/xiaoZ-cli/compare/v1.2.11...v1.3.0) (2021-07-27)

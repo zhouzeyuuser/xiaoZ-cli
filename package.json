@@ -1,6 +1,6 @@
 {
   "name": "xiaoz-cli",
-  "version": "1.3.1",
+  "version": "1.4.0-rc.0",
   "description": "基础项目脚手架工具",
   "main": "index.js",
   "bin": {
@@ -24,7 +24,9 @@
     "eslint",
     "vscode",
     "commit",
-    "release"
+    "release",
+    "sentry",
+    "jenkinsfile"
   ],
   "repository": {
     "type": "git",
