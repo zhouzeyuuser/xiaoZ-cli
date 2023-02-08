@@ -14,7 +14,7 @@ export const sentryAppTitle = `
 import * as Sentry from '@sentry/react';
 import { Integrations } from '@sentry/tracing';
 import SentryRRWeb from '@sentry/rrweb';
-`
+`;
 //sentry的app入口具体内容配置
 export const sentryAppContext = `
 Sentry.init({
@@ -40,19 +40,21 @@ Sentry.init({
     email: 'xxx', // 邮箱
     username: 'xxx', // 用户名
   });
-`
+`;
 //sentry的webpack配置的引入插件包
 export const sentryWebpackTitle = `
 const SentryPlugin = require('@sentry/webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-`
+`;
 //sentry的webapck配置是否开启源码sourcemap配置
 export const sentryWebpackDevtool = `
 devtool: process.env.NODE_ENV === 'production' ? 'source-map' : 'eval',
-`
+`;
 //sentry的webpack配置的具体chainWebpack配置
 export const sentryWebpackContext = `
-if (process.env.NODE_ENV === 'production') {//当为prod时候才进行sourcemap的上传，如果不判断，在项目运行的打包也会上传
+devtool: process.env.NODE_ENV === 'production' ? 'source-map' : 'eval',
+chainWebpack(config, { webpack }) {
+  if (process.env.NODE_ENV === 'production') {//当为prod时候才进行sourcemap的上传，如果不判断，在项目运行的打包也会上传
     config.plugin("sentry").use(SentryPlugin, [{
       ignore: ['node_modules'],
       include: 'xxx/xxx/xx', //上传dist文件的js
@@ -67,4 +69,5 @@ if (process.env.NODE_ENV === 'production') {//当为prod时候才进行sourcemap
       cleanAfterEveryBuildPatterns: ["*.js.map"]//针对outpath为相对路径
     }])
   }
-`
+},
+`;
