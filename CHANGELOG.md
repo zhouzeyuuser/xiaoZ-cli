@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/zhouzeyuuser/xiaoZ-cli/compare/v1.4.0...v1.4.1) (2023-02-08)
+
 ## [1.4.0](https://github.com/zhouzeyuuser/xiaoZ-cli/compare/v1.4.0-rc.1...v1.4.0) (2023-02-08)
 
 
