@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/zhouzeyuuser/xiaoZ-cli/compare/v1.4.0-rc.1...v1.4.0) (2023-02-08)
+
+
+### Bug Fixes
+
+* 处理sentry模版问题和更换talk配置 ([ca6f84b](https://github.com/zhouzeyuuser/xiaoZ-cli/commit/ca6f84bdb7a6abfe7f9edfe39d4a31a3b9a6ab2e))
+
 ## [1.4.0-rc.1](https://github.com/zhouzeyuuser/xiaoZ-cli/compare/v1.4.0-rc.0...v1.4.0-rc.1) (2023-02-08)
 
 ## [1.4.0-rc.0](https://github.com/zhouzeyuuser/xiaoZ-cli/compare/v1.3.1...v1.4.0-rc.0) (2023-02-08)
