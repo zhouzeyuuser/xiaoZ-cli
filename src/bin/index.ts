@@ -29,7 +29,7 @@ async function start() {
   program
     .option(
       "-D, --dep [dep...]",
-      "需要集成的工具，支持 xiaoz cli -D jest eslint ts editorConfig commit vscode release travis"
+      "需要集成的工具，支持 xiaoz cli -D jest eslint ts editorConfig commit vscode release travis clock sentry jenkins"
     )
     .option("-a, --all", "是否全部集成")
     .option("-l, --list", "查看支持的工具")
